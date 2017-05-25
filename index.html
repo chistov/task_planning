@@ -27,17 +27,24 @@
 
   <body>
    <div id="nav">
+      <ul class="container">
+        <li>Add task</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+        <li>Menu 4</li>
+      </ul>
    </div>
 
    <div id="manage">
        <input type="text" ng-model="taskName.name">
+       <input type="button" value="Add new task" ng-click="addTask()">
    </div>
    <div id="column">
     <div ng-repeat="task in taskList">
       <div class="record">
-        {{task.name}} : <span class="curr_time">{{task.timeString}}</span>
-        <img class="reset" src="imgs/stop.jpg" ng-click="resetTimer(task)"> <!-- TODO: fix sequence! -->
+        {{task.name}}<span class="curr_time">{{task.timeString}}</span>
         <img class="start" src="imgs/play.png" ng-click="startTimer(task)">
+        <img class="reset" src="imgs/stop.jpg" ng-click="resetTimer(task)"> <!-- TODO: fix sequence! -->
       </div>
     </div>
    </div>

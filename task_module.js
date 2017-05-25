@@ -10,7 +10,9 @@ app.controller('tasksCtrl', function($scope, $interval){
   $scope.taskList = [];
 
   $scope.addTask = function(){
-    $scope.taskList.push(angular.copy($scope.taskName));
+    let newTask = angular.copy($scope.taskName);
+    $scope.taskList.push(newTask);
+    $scope.taskName.name = '';
     console.log('list: ', $scope.taskList);
   }
 
@@ -30,9 +32,7 @@ app.controller('tasksCtrl', function($scope, $interval){
         
         return Math.floor( diff/divideBy[datepart]);
       }
-      //Set the two dates
-      // task.timer.setSeconds( Date.dateDiff('s', start, new Date()) );
-      // task.timeString = task.timer.toISOString().substr(11, 8)
+
       let totalSeconds = Date.dateDiff('s', start, new Date()); 
       hours = Math.floor(totalSeconds / 3600);
       if(hours < 10) hours = '0'+hours;

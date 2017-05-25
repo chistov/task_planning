@@ -1,3 +1,49 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 body {
   width: 1300px;
   float: center;
@@ -21,10 +67,21 @@ body {
   background: white;
 }
 
-#manage input{
+#manage input[type="text"]{
   height: 50px;
-  width: 600px;
+  width: 750px;
   position: absolute;
+  padding-left: 20px;
+}
+
+.container li{
+  float: left;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  padding-top: 15px;
+  border-right: 2px solid grey;
 }
 
 #column {
@@ -34,28 +91,42 @@ body {
   position: absolute;
 }
 
+.start {
+  height: auto;
+  width: 38px;
+  position: absolute;
+  right: 46px;
+  top: 0px;
+}
 
 .reset {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  float: right;
-  margin-right: 5px;
-  margin-top: 1px;
+  width: 33px;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  top: 2px;
 }
-
-.start {
-  height: 22px;
-  border-radius: 10px;
-  margin-right: 5px;
-  float: right;
-  width: 25px;
-}
-
 
 .record {
+  padding-top: 10px;
   padding-left: 10px;
   width: 100%;
   float: left;
-  margin: 0 auto;
+  background: white;
+  height: 40px;
+  position: relative;
+  border-bottom: 2px solid;
+}
+
+.record .curr_time{
+    position: absolute;
+    right: 100px;
+    font-size: 20px;
+}
+
+#manage input[type="button"] {
+    position: absolute;
+    left: 750px;
+    width: 150px;
+    height: 50px;
 }
