@@ -1,0 +1,61 @@
+body {
+  width: 1300px;
+  float: center;
+  background: #B6B6B6;
+}
+
+#nav {
+  left: 300px;
+  width: 1000px;
+  height: 50px;
+  position: relative;
+  background: black;
+}
+
+#manage {
+  top: 90px;
+  left: 350px;
+  width: 900px;
+  height: 50px;
+  position: absolute;
+  background: white;
+}
+
+#manage input{
+  height: 50px;
+  width: 600px;
+  position: absolute;
+}
+
+#column {
+  top: 200px;
+  left: 350px;
+  width: 900px;
+  position: absolute;
+}
+
+
+.reset {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 1px;
+}
+
+.start {
+  height: 22px;
+  border-radius: 10px;
+  margin-right: 5px;
+  float: right;
+  width: 25px;
+}
+
+
+.record {
+  padding-left: 10px;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+}
