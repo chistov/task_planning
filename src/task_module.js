@@ -10,14 +10,14 @@ app.controller('tasksCtrl', function($scope, $interval){
   $scope.taskList = [];
 
   $scope.addTask = function(){
-    let newTask = angular.copy($scope.taskName);
+    var newTask = angular.copy($scope.taskName);
     $scope.taskList.push(newTask);
     $scope.taskName.name = '';
     console.log('list: ', $scope.taskList);
   }
 
   $scope.startTimer = function(task){
-    let start = new Date();
+    var start = new Date();
     console.log("startTimer: ", task);
     task.intervalId = $interval(() => {
        // datepart: 'y', 'm', 'w', 'd', 'h', 'n', 's'
